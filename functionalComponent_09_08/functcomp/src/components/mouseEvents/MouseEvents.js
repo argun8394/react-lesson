@@ -13,9 +13,17 @@ const MouseEvents = () => {
    * mouseMove
    */
   // click event
+
+  //mouseMove
   const handleMouseMove =(e)=>{
 setCoordX(e.nativeEvent.offsetX);
 setCoordY(e.nativeEvent.offsetY);  }
+
+// click
+
+const handleClick=(event)=>{
+   console.log({eventType: event.type, id: event.target.id})};
+
 
   return (
     <>
@@ -27,10 +35,10 @@ setCoordY(e.nativeEvent.offsetY);  }
         <li id="todo-1" onMouseMove={handleMouseMove}>
           todo item 1 <span>X</span>
         </li>
-        <li id="todo-2 " >
+        <li id="todo-2 " onClick={handleClick} >
           todo item 2 <span>X</span>
         </li>
-        <li >
+        <li id="todo-3" onDoubleClick={handleDoubleClick}>
           todo item 3 <span>X</span>
         </li>
         <li>
