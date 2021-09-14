@@ -24,6 +24,9 @@ setCoordY(e.nativeEvent.offsetY);  }
 const handleClick=(event)=>{
    console.log({eventType: event.type, id: event.target.id})};
 
+   function handleDoubleClick(e){
+    alert(e.target.id)
+  }
 
   return (
     <>
