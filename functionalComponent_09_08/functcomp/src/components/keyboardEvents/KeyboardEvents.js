@@ -24,9 +24,11 @@ const handleKeyUp=(event) => {
 const handleCut=(e)=> console.log("event type : ", e.type);
 
 //paste
-
-
+const handlePaste=(e)=> {
+  console.log("event type : ", e.type);
+}
 //copy
+const handleCopy=(e)=> console.log("event type : ", e.type);
 
 
 
@@ -36,9 +38,10 @@ const handleCut=(e)=> console.log("event type : ", e.type);
       <h2>KeyboardEvents</h2>
       <input
         type="text" onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}
+        
       />
-      <p onCut={handleCut}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
+      <p onCut={handleCut} onPaste={handlePaste} onCopy={handleCopy}>
+        Lorem Ipsum is simply dummy textdummydummy of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
         scrambled it to make a type specimen book. It has survived not only five
