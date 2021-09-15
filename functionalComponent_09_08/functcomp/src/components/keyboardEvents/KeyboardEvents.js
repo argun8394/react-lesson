@@ -8,11 +8,21 @@ const KeyboardEvents = () => {
    * paste
    */
 
+
+  //KeyDown
+const handleKeyDown = (e) => {
+  console.log("event type : ", e.type )
+}
+
+
+
+
+
   return (
     <div style={{ marginTop: "30px" }}>
       <h2>KeyboardEvents</h2>
       <input
-        type="text"
+        type="text" onKeyDown={handleKeyDown}
       />
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
