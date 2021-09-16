@@ -1,10 +1,44 @@
 import "./styles.css";
-
+import {useState} from "react"
 const Form = () => {
+  const [name, setName]=useState("");
+  const [email, setEmail]=useState("");
+  const [password, setPassword]=useState("");
+  const [country, setCountry]=useState("");
+
+  console.log({name, email,password, country});
+
+  //name
+const handleNameField=e=>setName(e.target.value);
+  //email
+  const handleEmailField=e=>setEmail(e.target.value);
+
+  //password
+  const handlePasswordField=e=>setPassword(e.target.value);
+
+  //country
+  const handleCountryField=e=>setCountry(e.target.value);
+
+  //submit
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    alert(`
+    username:${name}
+    email:${email}
+    password:${password}
+    country:${country}
+    `
+    )
+    setName("");
+    setEmail("");
+    setPassword("");
+    setCountry("");
+  }
+
 
   return (
     <div style={{ height: "110vh" }}>
-      <form >
+      <form  onSubmit={handleSubmit}>
         <div>
           <p>name here</p>
           <label>
@@ -14,6 +48,8 @@ const Form = () => {
           <input
             type="text"
             placeholder="name"
+            value={name}
+            onChange={handleNameField}
           />
         </div>
         <div>
@@ -25,6 +61,8 @@ const Form = () => {
           <input
             type="email"
             placeholder="email"
+            value={ email}
+            onChange={handleEmailField}
           />
         </div>
         <div>
@@ -36,6 +74,8 @@ const Form = () => {
           <input
             type="password"
             placeholder="pass"
+            value={ password}
+            onChange={handlePasswordField}
           />
         </div>
         <div style={{ margin: "10px auto" }}>
@@ -44,6 +84,8 @@ const Form = () => {
             <strong>Country: </strong>
           </label>
           <select
+          value={country}
+          onChange={handleCountryField}
             style={{ marginTop: "10px", width: "100px", padding: "10px" }}
           >
             <option value="">Country</option>
