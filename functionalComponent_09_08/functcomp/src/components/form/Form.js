@@ -1,5 +1,8 @@
 import "./styles.css";
 import {useState} from "react"
+
+import { setInput } from "../../helpers/inputHelpers";
+
 const Form = () => {
   const [name, setName]=useState("");
   const [email, setEmail]=useState("");
@@ -49,7 +52,8 @@ const handleNameField=e=>setName(e.target.value);
             type="text"
             placeholder="name"
             value={name}
-            onChange={handleNameField}
+            // onChange={handleNameField}
+            onChange={setInput(setName)}
           />
         </div>
         <div>
@@ -62,7 +66,8 @@ const handleNameField=e=>setName(e.target.value);
             type="email"
             placeholder="email"
             value={ email}
-            onChange={handleEmailField}
+            // onChange={handleEmailField}
+            onChange={setInput(setEmail)}
           />
         </div>
         <div>
@@ -75,7 +80,8 @@ const handleNameField=e=>setName(e.target.value);
             type="password"
             placeholder="pass"
             value={ password}
-            onChange={handlePasswordField}
+            // onChange={handlePasswordField}
+            onChange={setInput(setPassword)}
           />
         </div>
         <div style={{ margin: "10px auto" }}>
@@ -85,7 +91,8 @@ const handleNameField=e=>setName(e.target.value);
           </label>
           <select
           value={country}
-          onChange={handleCountryField}
+          // onChange={handleCountryField}
+          onChange={setInput(setCountry)}
             style={{ marginTop: "10px", width: "100px", padding: "10px" }}
           >
             <option value="">Country</option>
