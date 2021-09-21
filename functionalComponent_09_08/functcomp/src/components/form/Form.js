@@ -11,16 +11,16 @@ const Form = () => {
 
   console.log({name, email,password, country});
 
-  //name
-const handleNameField=e=>setName(e.target.value);
-  //email
-  const handleEmailField=e=>setEmail(e.target.value);
+//   //name
+// const handleNameField=e=>setName(e.target.value);
+//   //email
+//   const handleEmailField=e=>setEmail(e.target.value);
 
-  //password
-  const handlePasswordField=e=>setPassword(e.target.value);
+//   //password
+//   const handlePasswordField=e=>setPassword(e.target.value);
 
-  //country
-  const handleCountryField=e=>setCountry(e.target.value);
+//   //country
+//   const handleCountryField=e=>setCountry(e.target.value);
 
   //submit
   const handleSubmit=(e)=>{
