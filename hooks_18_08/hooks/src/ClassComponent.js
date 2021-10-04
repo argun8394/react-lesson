@@ -8,6 +8,15 @@ class ClassComponent extends React.Component {
         };
         this.increase=this.increase.bind(this);
     }
+
+    componentDidMount(){
+        console.log("ComponentDidMount");
+    }
+
+    componentDidUpdate(){
+        console.log("ComponentDidUpdate");
+    }
+
     increase(){
         this.setState({counter:this.state.counter +1});
     }
