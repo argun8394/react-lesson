@@ -5,7 +5,7 @@ const FunctionalComponent=()=> {
 
 useEffect(() => {
     console.log("useEffect");
-})
+},[counter]);//useEffect bağımlılık verme boşsa ComponentDidMount- doluysa ComponentDidupdate şeklinde çalışır 
 
     const increase = () => {
         setCounter(counter+1);
