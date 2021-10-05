@@ -16,6 +16,9 @@ class ClassComponent extends React.Component {
     componentDidUpdate(){
         console.log("ComponentDidUpdate");
     }
+    componentWillUnmount(){
+        console.log("ComponentWillUnmount");
+    }
 
     increase(){
         this.setState({counter:this.state.counter +1});
