@@ -5,6 +5,7 @@ const FunctionalComponent=()=> {
 
 useEffect(() => {
     console.log("useEffect");
+    return()=>{ console.log("Func. Comp. willUnmount") }//funcComponent için willUnmount işlemi useEffect içindeki return ile yapılır
 },[counter]);//useEffect bağımlılık verme boşsa ComponentDidMount- doluysa ComponentDidupdate şeklinde çalışır 
 
     const increase = () => {

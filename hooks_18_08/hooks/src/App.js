@@ -11,9 +11,13 @@ const [isVisible,setVisible] =useState(true);
   return (
     <div className="App">
       <button onClick={()=>setVisible(!isVisible)}> Toggle </button>
-      {isVisible && <ClassComponent/>}// görünürlüğü manipüle ederiz
+      {/* {isVisible && <ClassComponent/>}// görünürlüğü manipüle ederiz */}
       {/* <ClassComponent/> */}
-      <FunctionalComponent/>
+            {/* <ClassComponent/> */}
+           {true && <ClassComponent/>}
+
+      {isVisible ? <FunctionalComponent/> :null}
+      {/* <FunctionalComponent/> */}
       
     </div>
   );
